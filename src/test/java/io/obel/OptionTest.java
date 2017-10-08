@@ -22,8 +22,7 @@ public class OptionTest {
     public void should_not_fail_when_creating_option_of_null() {
         final Option<Object> nullOption = Option.of(null);
         assertThat(nullOption.isDefined()).isFalse();
-        // Doesn't throw exception on get
-        assertThat(nullOption.get()).isEqualTo(Option.none());
+        assertThat(nullOption).isEqualTo(Option.none());
     }
 
     @Test
